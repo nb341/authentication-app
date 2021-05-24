@@ -9,7 +9,7 @@ import {
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import PersonalInfo from './pages/PersonalInfo';
-
+import Header from './components/Header';
 const routes = [
   {
     path: "/register",
@@ -26,6 +26,8 @@ const routes = [
 ];
 function App() {
   return (
+    <div>
+    <Header/>
     <Router>
       <Switch>
           <Route exact path="/">
@@ -42,6 +44,7 @@ function App() {
           }
         </Switch>
     </Router>
+    </div>
   );
 }
 
