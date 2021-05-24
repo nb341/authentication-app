@@ -48,7 +48,7 @@ const ProfileButton = () =>{
 
 export default function Header(){
     return(
-    <Box display="flex" justifyContent="space-between">
+    <Box display="flex" justifyContent="space-between" style={{padding: 2}}>
         <Logo/>
         <ProfileButton/>
     </Box>
