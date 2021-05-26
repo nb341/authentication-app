@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CardTemplate from '../components/CardComponent';
   export default function SignUp() {
   

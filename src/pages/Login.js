@@ -1,5 +1,4 @@
 import CardTemplate from '../components/CardComponent';
-
 export default function Login(){
     return(
     <CardTemplate

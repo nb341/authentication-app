@@ -15,6 +15,7 @@ import { ReactComponent as Facebook } from '../assets/Facebook.svg';
 import { ReactComponent as Github } from '../assets/Gihub.svg';
 import { ReactComponent as Google } from '../assets/Google.svg';
 import { ReactComponent as Twitter } from '../assets/Twitter.svg';
+import {signInWithGoogle} from '../firebase/firebase.utils';
 const useStyles = makeStyles({
     root: {
         maxWidth : "474px",
@@ -112,7 +113,7 @@ const useStyles = makeStyles({
             or continue with these social profile
           </Typography>
           <Box display="flex" justifyContent="center">
-            <Button><Google/></Button>
+            <Button onClick={signInWithGoogle}><Google/></Button>
             <Button><Facebook/></Button>
             <Button><Twitter/></Button>
             <Button><Github/></Button>

@@ -7,12 +7,14 @@ import { Box,
          MenuItem,
          MenuList,
          makeStyles,
-         Divider
+         Divider,
+         Avatar
     } 
     from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import React, { useState } from 'react';
-import { CustomPlaceholder } from 'react-placeholder-image';
+import {Link} from 'react-router-dom';
 import {ReactComponent as Logo} from '../assets/devchallenges.svg'
 
 
@@ -28,13 +30,15 @@ const ProfileButton = () =>{
     return (
         <div>
             <Button style={{textTransform: 'none', margin: 0, padding: 0}} onClick={(e)=> setOpen(!open) }>
-                <CustomPlaceholder width={24} height={24} />
+                <Avatar alt="XN" style={{width: 24, height: 24}} />
                 <span style={{padding: "0 15px"}}>Xantel Neal</span>
-                <ArrowDropDownIcon/>
+              {  !open ? <ArrowDropDownIcon/> : <ArrowDropUpIcon/>
+
+                }
             </Button>
-          { open &&  <Paper elevation={3}>
+          { open &&  <Paper elevation={3} style={{position: 'absolute', marginTop: 15, right: 100}} >
                 <Box display="flex" flexDirection="column" >
-                <Button className={classes.root}>My Profile</Button>
+                <Button className={classes.root}><Link to="/my-info">My Profile</Link></Button>
                 <Button className={classes.root}>Group Chat</Button>
                  <Divider/>
                 <Button className={classes.root}>Logout</Button>

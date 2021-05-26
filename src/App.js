@@ -10,6 +10,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import PersonalInfo from './pages/PersonalInfo';
 import Header from './components/Header';
+import ChangeInfo from './pages/ChangeInfo';
 const routes = [
   {
     path: "/register",
@@ -22,13 +23,17 @@ const routes = [
   {
     path: "/my-info",
     component: PersonalInfo
+  },
+  {
+    path: "/edit-info",
+    component: ChangeInfo
   }
 ];
 function App() {
   return (
     <div>
-    <Header/>
     <Router>
+    <Header/>
       <Switch>
           <Route exact path="/">
             <SignUp />
